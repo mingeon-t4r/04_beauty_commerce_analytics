@@ -1,0 +1,72 @@
+
+# ==========================================
+# Beauty Commerce Analytics - .gitignore
+# ==========================================
+
+# 1. Python 가상환경
+.venv/
+venv/
+env/
+
+# 2. Python 캐시 및 빌드 파일
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# 3. Jupyter Notebook 임시 파일
+.ipynb_checkpoints/
+
+# 4. 데이터 파일 (원본/가공/마트)
+data/raw/*
+data/processed/*
+data/marts/*
+
+# 폴더 구조를 유지하기 위한 .gitkeep 허용
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/marts/.gitkeep
+
+# 5. 데이터베이스 파일
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.duckdb
+*.duckdb.wal
+
+# 6. 실행 로그
+logs/*
+!logs/.gitkeep
+*.log
+
+# 7. 환경변수 및 인증정보
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 8. 테스트 및 도구 캐시
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 9. 운영체제 임시 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 10. VS Code 개인 설정
+.vscode/
+
+# 11. 임시 파일
+*.tmp
+*.bak
+*.swp
+*~
